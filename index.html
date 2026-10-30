@@ -291,7 +291,8 @@
         if (!info || !/^https:\/\//.test(info.url || '')) return // belum ada APK: tetap pakai teks cadangan
         const nama = String(info.versionName || info.versionCode || '')
         if (nama) {
-          $('info-versi').textContent = nama
+          // Versi di bawah 1.0.0 = beta (sama dengan label di aplikasi)
+          $('info-versi').textContent = /^0\./.test(nama) ? `${nama} Beta` : nama
           $('teks-apk').textContent = `Unduh APK ${nama}`
           document.querySelectorAll('.versi-teks').forEach((el) => (el.textContent = nama))
         }
