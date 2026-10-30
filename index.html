@@ -394,7 +394,7 @@
       // hanya 3 event, tanpa autocapture & rekaman sesi. Sengaja tidak memakai $pageview
       // agar kunjungan di sini tidak ikut terhitung sebagai pengunjung aplikasi. GitHub Pages tanpa proxy /sinyal →
       // kirim langsung ke PostHog EU. Kunci kosong atau di luar unduh-lt.silsilara.com: event hanya ditulis ke konsol.
-      const POSTHOG_KEY = '' // isi dengan kunci proyek PostHog LacakTrans (phc_...) setelah proyeknya dibuat
+      const POSTHOG_KEY = 'phc_oqUEZzNAziQKaumS7jwDjAsDRrUcjg2CWRyvc7FLR9Fz' // kunci proyek PostHog LacakTrans (EU), publik
       const ANALITIK = Boolean(POSTHOG_KEY) && location.hostname === 'unduh-lt.silsilara.com'
       const antreanAnalitik = []
       const lacak = (event, props = {}) => {
