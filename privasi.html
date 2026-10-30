@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebijakan Privasi — LacakTrans</title>
+    <meta name="description" content="Kebijakan privasi aplikasi LacakTrans: data apa yang dipakai, di mana disimpan, dan bagaimana menghapusnya." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="gaya.css" />
+    <link rel="canonical" href="https://unduh-lt.silsilara.com/privasi.html" />
+    <script src="tema.js"></script>
+  </head>
+  <body>
+    <main>
+      <p class="kecil"><a href="./">← LacakTrans</a> · <a href="privacy.html" lang="en">English</a></p>
+      <h1>Kebijakan Privasi</h1>
+      <p class="kecil">Berlaku sejak 30 Oktober 2026 · Aplikasi: LacakTrans (Android <code>com.silsilara.lacaktrans</code> dan web)</p>
+
+      <p>
+        Kebijakan ini menjelaskan data apa yang dipakai LacakTrans, untuk apa, dan di mana data itu disimpan. Singkatnya:
+        <strong>tanpa akun</strong>. Favorit dan setelan hanya di perangkat Anda. Lokasi dibaca untuk mencari halte terdekat dan
+        <strong>tidak pernah dikirim ke server mana pun</strong>, karena LacakTrans tidak punya server untuk data pengguna.
+      </p>
+
+      <h2>1. Lokasi</h2>
+      <p>
+        Bila Anda mengizinkan, LacakTrans membaca lokasi perangkat untuk menampilkan halte dan stasiun terdekat dan untuk
+        memusatkan peta ke posisi Anda. Lokasi hanya dipakai di perangkat saat aplikasi terbuka: tidak disimpan, tidak
+        dikirim ke server LacakTrans, dan tidak diteruskan ke pihak lain. Tanpa izin lokasi, aplikasi tetap bisa dipakai dan
+        halte terdekat dihitung dari tengah peta.
+      </p>
+
+      <h2>2. Data yang tersimpan di perangkat</h2>
+      <ul>
+        <li>Halte dan stasiun favorit.</li>
+        <li>Setelan: tema terang/gelap, bahasa, dan filter moda di peta.</li>
+        <li>Data jadwal terbaru yang diunduh dari situs LacakTrans, agar tetap bisa dipakai saat offline.</li>
+        <li>Kode acak statistik pemakaian (lihat bagian 4) dan penanda pemberitahuan versi baru yang ditunda.</li>
+        <li>Di Android: gambar kartu Story sementara saat Anda membagikannya; gambar lama dihapus saat Anda berbagi lagi.</li>
+      </ul>
+      <p>Data ini tidak pernah dikirim ke server LacakTrans.</p>
+
+      <h2>3. Layanan yang diakses langsung dari perangkat</h2>
+      <p>Untuk menampilkan peta dan posisi kendaraan, aplikasi mengambil data langsung dari penyedianya:</p>
+      <ul>
+        <li><strong>Feed armada TransJakarta</strong>: posisi bus untuk area peta yang sedang terlihat. Server TransJakarta menerima permintaan per area peta, bukan lokasi GPS Anda.</li>
+        <li><strong>OpenFreeMap</strong>: gambar peta (tile) untuk area yang sedang dilihat.</li>
+        <li><strong>Situs LacakTrans</strong> (Vercel): jadwal terbaru, info versi, dan banner gangguan.</li>
+      </ul>
+      <p>
+        Seperti semua layanan internet, penyedia tersebut dapat melihat alamat IP perangkat yang meminta data. Google Maps,
+        WhatsApp, Instagram, TikTok, Facebook, dan aplikasi lain hanya dibuka bila Anda mengetuk tombol bagikan atau
+        "Rute ke sini", dan tunduk pada kebijakan privasi masing-masing.
+      </p>
+
+      <h2>4. Statistik pemakaian</h2>
+      <p>
+        Statistik pemakaian anonim (layar yang dibuka, fitur yang dipakai) dikirim ke PostHog (server di Uni Eropa)
+        <strong>tanpa identitas dan tanpa lokasi GPS</strong>, untuk memprioritaskan pengembangan. Statistik ini memakai kode
+        acak di perangkat, bukan akun, nama, atau nomor telepon.
+      </p>
+
+      <h2>5. Berbagi data</h2>
+      <p>
+        LacakTrans <strong>tidak menjual, menyewakan, atau membagikan</strong> data Anda kepada pihak ketiga, dan tidak memakai
+        iklan. Penyedia layanan yang dipakai untuk menjalankan LacakTrans hanya memproses data untuk keperluan itu: Vercel
+        (situs dan data jadwal), PostHog (statistik pemakaian), Google Drive (berkas APK), TransJakarta (posisi bus), dan
+        OpenFreeMap (peta). Penyedia ini dapat memproses data di luar Indonesia.
+      </p>
+
+      <h2>6. Keamanan</h2>
+      <p>Semua komunikasi aplikasi memakai koneksi terenkripsi (HTTPS dan WSS). Tidak ada akun atau kata sandi yang perlu dijaga karena LacakTrans tidak memakai akun.</p>
+
+      <h2>7. Menghapus data</h2>
+      <ul>
+        <li>Hapus favorit satu per satu dari layar halte atau stasiun.</li>
+        <li>Hapus semua data di perangkat lewat <strong>Setelan Android → Aplikasi → LacakTrans → Penyimpanan → Hapus data</strong>, dengan menghapus aplikasi, atau dengan menghapus data situs di browser untuk versi web.</li>
+        <li>Cabut izin lokasi kapan saja di setelan HP atau browser.</li>
+      </ul>
+
+      <h2>8. Anak-anak</h2>
+      <p>LacakTrans tidak meminta data pribadi dan bisa dipakai tanpa akun oleh siapa pun. Kami tidak dengan sengaja mengumpulkan data pribadi anak-anak.</p>
+
+      <h2>9. Perubahan kebijakan</h2>
+      <p>Bila kebijakan ini berubah, versi terbaru dan tanggal berlakunya akan diperbarui di halaman ini.</p>
+
+      <h2>10. Kontak</h2>
+      <p>
+        Pengembang: Risyad Abdala Ramadhan ·
+        <a href="https://github.com/masrisyad">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/risyadabdalaramadhan/">LinkedIn</a>
+      </p>
+
+      <footer>© 2026 Risyad Abdala Ramadhan. Hak cipta dilindungi. · <a href="syarat.html">Syarat &amp; Ketentuan</a></footer>
+    </main>
+  </body>
+</html>

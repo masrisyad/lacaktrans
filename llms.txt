@@ -1,0 +1,16 @@
+# LacakTrans
+
+> LacakTrans adalah aplikasi gratis berbahasa Indonesia untuk Android dan web yang menampilkan posisi dan jadwal transportasi umum Jakarta dan sekitarnya dalam satu peta. Posisi bus TransJakarta live dari GPS armada; posisi KRL Commuter Line, MRT Jakarta, LRT Jabodebek, dan LRT Jakarta diperkirakan dari jadwal dan ditandai jelas sebagai perkiraan. Tanpa akun dan tanpa iklan. LacakTrans tidak berafiliasi dengan operator mana pun.
+
+English: LacakTrans is a free, Indonesian-language app for Android and the web that shows Jakarta public transport positions and schedules on one map: live TransJakarta buses from fleet GPS, and KRL, MRT, and LRT positions estimated from schedules. No account, no ads.
+
+## Halaman
+
+- [Unduh aplikasi Android (APK) dan info](https://unduh-lt.silsilara.com/): versi terbaru, cara memasang dan memperbarui, pertanyaan umum.
+- [Versi web](https://lacaktrans.silsilara.com/): isi sama dengan aplikasi Android, juga untuk iPhone dan laptop.
+- [Kebijakan Privasi](https://unduh-lt.silsilara.com/privasi.html) · [Privacy Policy](https://unduh-lt.silsilara.com/privacy.html)
+- [Syarat & Ketentuan](https://unduh-lt.silsilara.com/syarat.html) · [Terms & Conditions](https://unduh-lt.silsilara.com/terms.html)
+
+## Pengembang
+
+Risyad Abdala Ramadhan (https://github.com/masrisyad), pembuat Silsilara.

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LacakTrans — Unduh Aplikasi Lacak TransJakarta, KRL, MRT, LRT</title>
+    <meta name="description" content="LacakTrans, aplikasi gratis untuk melihat posisi dan jadwal TransJakarta, KRL, MRT, dan LRT dalam satu peta. Tanpa akun, untuk Android dan web." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="gaya.css" />
+    <meta name="theme-color" content="#f5f2ea" />
+    <script src="tema.js"></script>
+    <!-- Pratinjau saat tautan dibagikan (WhatsApp, Telegram, Facebook, dll.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LacakTrans" />
+    <meta property="og:title" content="Unduh LacakTrans — Lacak TransJakarta, KRL, MRT, LRT" />
+    <meta property="og:description" content="Telusuri Jalur, Hubungkan Perjalanan. Unduh APK Android terbaru atau buka versi web." />
+    <meta property="og:url" content="https://unduh-lt.silsilara.com/" />
+    <meta property="og:image" content="https://unduh-lt.silsilara.com/gambar/pratinjau.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://unduh-lt.silsilara.com/" />
+    <!-- Data terstruktur untuk Google (hasil penelusuran & jawaban AI). Isi FAQPage harus sama dengan bagian
+         "Pertanyaan umum" di bawah; ubah keduanya bersamaan. Versi APK sengaja tidak ditulis di sini agar tidak basi. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://unduh-lt.silsilara.com/#situs",
+            "url": "https://unduh-lt.silsilara.com/",
+            "name": "LacakTrans",
+            "inLanguage": "id"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://unduh-lt.silsilara.com/#pengembang",
+            "name": "Risyad Abdala Ramadhan",
+            "sameAs": ["https://github.com/masrisyad", "https://www.linkedin.com/in/risyadabdalaramadhan/"]
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://unduh-lt.silsilara.com/#aplikasi",
+            "name": "LacakTrans",
+            "alternateName": "LacakTrans by Silsilara",
+            "description": "Aplikasi gratis untuk melihat posisi dan jadwal transportasi umum Jakarta dalam satu peta: bus TransJakarta live dari GPS armada, KRL, MRT, LRT Jabodebek, dan LRT Jakarta diperkirakan dari jadwal. Tanpa akun dan tanpa iklan.",
+            "url": "https://unduh-lt.silsilara.com/",
+            "applicationCategory": "TravelApplication",
+            "operatingSystem": "Android 5.1+",
+            "inLanguage": ["id", "en"],
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IDR" },
+            "image": "https://unduh-lt.silsilara.com/gambar/pratinjau.png",
+            "screenshot": [
+              "https://unduh-lt.silsilara.com/gambar/1-peta.webp",
+              "https://unduh-lt.silsilara.com/gambar/2-tooltip.webp",
+              "https://unduh-lt.silsilara.com/gambar/3-halte.webp",
+              "https://unduh-lt.silsilara.com/gambar/4-kereta.webp"
+            ],
+            "featureList": [
+              "Posisi bus TransJakarta live dari GPS armada",
+              "Posisi KRL, MRT, dan LRT diperkirakan dari jadwal, ditandai jelas",
+              "Semua moda dalam satu peta",
+              "Kedatangan berikutnya di halte dan stasiun",
+              "Bagikan rute dan kartu Story",
+              "Bahasa Indonesia dan English, tema gelap dan terang"
+            ],
+            "author": { "@id": "https://unduh-lt.silsilara.com/#pengembang" },
+            "sameAs": ["https://lacaktrans.silsilara.com/"]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Kenapa LacakTrans tidak ada di Play Store?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Untuk saat ini LacakTrans dibagikan langsung sebagai berkas APK lewat halaman ini. Halaman ini selalu berisi versi terbaru, jadi cukup bagikan tautan ini." }
+              },
+              {
+                "@type": "Question",
+                "name": "Apakah aman dipasang?",
+                "acceptedAnswer": { "@type": "Answer", "text": "APK di halaman ini ditandatangani dengan kunci resmi LacakTrans, jadi pembaruan hanya bisa dipasang di atas aplikasi asli. Unduh hanya dari halaman ini, jangan dari berkas yang diteruskan orang lain." }
+              },
+              {
+                "@type": "Question",
+                "name": "Apakah favorit saya hilang saat memperbarui?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Tidak. Pasang versi baru di atas versi lama; favorit dan setelan tetap tersimpan di HP." }
+              },
+              {
+                "@type": "Question",
+                "name": "Kenapa posisi kereta disebut perkiraan?",
+                "acceptedAnswer": { "@type": "Answer", "text": "KRL, MRT, dan LRT belum membuka data posisi kereta. LacakTrans menghitung posisinya dari jadwal, jadi ditandai perkiraan dan bisa berbeda dari kereta sebenarnya. Posisi bus TransJakarta berasal dari GPS armada." }
+              },
+              {
+                "@type": "Question",
+                "name": "Saya memakai iPhone atau laptop.",
+                "acceptedAnswer": { "@type": "Answer", "text": "Gunakan versi web di https://lacaktrans.silsilara.com. Isinya sama dengan aplikasi Android." }
+              },
+              {
+                "@type": "Question",
+                "name": "Pemasangan diblokir atau gagal.",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pastikan izin Instal aplikasi tidak dikenal sudah dinyalakan untuk aplikasi yang membuka APK (Chrome, Drive, atau File). Bila muncul \"Aplikasi tidak terpasang\" karena versinya bentrok, hapus dulu LacakTrans versi uji coba lalu pasang ulang." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <!-- Info APK di bawah adalah cadangan; skrip memperbaruinya dari versi.json situs aplikasi (bagian "apk"). -->
+      <header class="aplikasi">
+        <img class="ikon-aplikasi" src="favicon.svg" alt="" width="96" height="96" />
+        <div>
+          <h1>LacakTrans</h1>
+          <p class="pengembang">Risyad Abdala Ramadhan</p>
+          <p class="slogan">Telusuri Jalur, Hubungkan Perjalanan</p>
+        </div>
+        <button id="tombol-tema" class="tombol-tema" type="button" aria-label="Ganti ke mode gelap" title="Ganti ke mode gelap">
+          <svg class="ikon-bulan" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="ikon-matahari" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </header>
+
+      <!-- Tampil bila dibuka dari browser bawaan Instagram/Facebook/TikTok: unduhan sering gagal di sana. -->
+      <div id="pesan-aplikasi" class="pemberitahuan" role="alert" hidden>
+        <strong>Anda membuka halaman ini dari <span id="nama-aplikasi">aplikasi lain</span>.</strong>
+        Unduhan bisa gagal di sini, jadi buka halaman ini di browser dulu.
+        <div class="tombol-unduh">
+          <a id="tombol-buka-browser" class="tombol utama" href="https://unduh-lt.silsilara.com/" hidden>Buka di browser</a>
+          <button id="salin-aplikasi" class="tombol kedua" type="button">Salin tautan</button>
+        </div>
+        <!-- Teks petunjuk diisi skrip sesuai perangkat (Android / iPhone & iPad). -->
+        <p id="petunjuk-menu" class="kecil">
+          Atau buka menu aplikasi ini, lalu pilih Buka di browser. Bisa juga salin tautan lalu tempel di browser.
+        </p>
+      </div>
+
+      <dl class="statistik">
+        <div><dt>Versi</dt><dd id="info-versi">—</dd></div>
+        <div><dt>Ukuran</dt><dd id="info-ukuran">—</dd></div>
+        <div><dt>Android</dt><dd>5.1+</dd></div>
+        <div><dt>Harga</dt><dd>Gratis</dd></div>
+      </dl>
+
+      <div id="pesan-iphone" class="pemberitahuan" hidden>
+        <strong>Aplikasi iOS belum tersedia untuk iPhone/iPad.</strong> Silakan pakai versi web lewat tombol di bawah;
+        isinya sama dan bisa disimpan ke layar utama dari Safari (Bagikan → Tambahkan ke Layar Utama).
+      </div>
+
+      <div class="unduh">
+        <div class="tombol-unduh">
+          <a id="tombol-apk" class="tombol utama" href="https://lacaktrans.silsilara.com" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M11 4h2v9.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM5 18h14v2H5z"/></svg>
+            <span id="teks-apk">APK segera tersedia</span>
+          </a>
+          <a id="tombol-web" class="tombol kedua" href="https://lacaktrans.silsilara.com" rel="noopener">Buka versi web</a>
+        </div>
+        <p id="catatan-unduh" class="kecil catatan-unduh">
+          APK belum diterbitkan. Sementara itu, pakai versi web; isinya sama dengan aplikasi Android.
+        </p>
+
+        <div id="kartu-qr" class="kartu kartu-qr" hidden>
+          <img src="gambar/qr.svg" alt="Kode QR halaman ini" width="132" height="132" />
+          <div>
+            <strong>Membuka dari komputer?</strong>
+            <p>Pindai kode ini dengan kamera HP Android untuk membuka halaman ini di HP, lalu ketuk Unduh APK.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bagikan">
+        <span class="kecil">Bagikan:</span>
+        <a id="bagikan-wa" class="tombol kecil-tombol" href="https://wa.me/?text=Unduh%20LacakTrans%2C%20aplikasi%20lacak%20TransJakarta%2C%20KRL%2C%20MRT%2C%20dan%20LRT%3A%20https%3A%2F%2Funduh-lt.silsilara.com%2F" rel="noopener">WhatsApp</a>
+        <button id="bagikan-salin" class="tombol kecil-tombol" type="button">Salin tautan</button>
+        <span id="bagikan-status" class="kecil" role="status"></span>
+      </div>
+
+      <section aria-labelledby="judul-layar">
+        <h2 id="judul-layar">Tampilan aplikasi</h2>
+        <div class="layar">
+          <img src="gambar/1-peta.webp" alt="Peta: bus TransJakarta live dan kereta perkiraan di sekitar Dukuh Atas" width="270" height="584" loading="lazy" />
+          <img src="gambar/2-tooltip.webp" alt="Kartu bus: rute, asal dan tujuan, halte berikutnya, perkiraan tiba" width="270" height="584" loading="lazy" />
+          <img src="gambar/3-halte.webp" alt="Layar halte: kedatangan bus berikutnya" width="270" height="584" loading="lazy" />
+          <img src="gambar/4-kereta.webp" alt="Layar kereta: stasiun berikutnya dan perkiraan tiba di tiap stasiun" width="270" height="584" loading="lazy" />
+        </div>
+        <p class="kecil">Posisi bus berasal dari GPS armada TransJakarta; posisi kereta diperkirakan dari jadwal.</p>
+      </section>
+
+      <section id="bagian-baru" aria-labelledby="judul-baru" hidden>
+        <h2 id="judul-baru">Apa yang baru</h2>
+        <p id="info-catatan"></p>
+      </section>
+
+      <section aria-labelledby="judul-pasang">
+        <h2 id="judul-pasang">Cara memasang di HP Android</h2>
+        <ol class="langkah">
+          <li>Ketuk <strong>Unduh APK</strong> di atas. Google Drive terbuka; ketuk tombol unduh, lalu <strong>Tetap download</strong> bila diminta.</li>
+          <li>Setelah selesai, buka berkas <strong>LacakTrans-<span class="versi-teks">versi</span>.apk</strong> dari notifikasi unduhan atau dari aplikasi <em>File</em> → <em>Download</em>.</li>
+          <li>Bila muncul pesan bahwa HP tidak diizinkan memasang aplikasi dari sumber ini, ketuk <strong>Setelan</strong>, nyalakan <strong>Izinkan dari sumber ini</strong>, lalu kembali.</li>
+          <li>Ketuk <strong>Instal</strong>. Bila Google Play Protect memberi peringatan, ketuk <strong>Detail lainnya</strong> → <strong>Tetap instal</strong>. Peringatan ini muncul karena LacakTrans tidak dipasang lewat Play Store.</li>
+          <li>Buka LacakTrans. Izinkan lokasi bila ingin melihat halte dan stasiun terdekat; tanpa izin itu peta tetap bisa dipakai.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="judul-perbarui">
+        <h2 id="judul-perbarui">Cara memperbarui</h2>
+        <p>
+          Saat ada versi baru, LacakTrans menampilkan pemberitahuan dengan tombol <strong>Unduh</strong>. Anda juga bisa kembali ke
+          halaman ini kapan saja. Pasang APK baru langsung di atas versi lama, <strong>tidak perlu menghapus aplikasi</strong>.
+          Favorit dan setelan tetap tersimpan.
+        </p>
+      </section>
+
+      <section aria-labelledby="judul-tentang">
+        <h2 id="judul-tentang">Tentang aplikasi</h2>
+        <div class="kartu">
+          <p>
+            LacakTrans menampilkan posisi dan jadwal transportasi umum Jakarta dan sekitarnya dalam satu peta, untuk menjawab
+            pertanyaan yang paling sering: kendaraan saya di mana sekarang, dan kapan sampai di halte atau stasiun saya?
+          </p>
+          <ul>
+            <li><strong>Bus TransJakarta live.</strong> Posisi dari GPS armada, diperbarui tiap beberapa detik, lengkap dengan halte berikutnya dan perkiraan tiba.</li>
+            <li><strong>KRL, MRT, LRT Jabodebek, LRT Jakarta.</strong> Posisi diperkirakan dari jadwal dan ditandai jelas, tidak dibuat seolah-olah live.</li>
+            <li><strong>Satu peta.</strong> Semua moda di satu layar, dengan filter per moda dan halte atau stasiun terdekat dari Anda.</li>
+            <li><strong>Bagikan perjalanan.</strong> Tautan rute, Google Maps, atau kartu Story untuk WhatsApp, Instagram, TikTok, dan Facebook.</li>
+            <li><strong>Tanpa akun, tanpa iklan.</strong> Favorit dan setelan hanya di HP Anda.</li>
+            <li><strong>Bahasa Indonesia &amp; English</strong>, tema gelap dan terang.</li>
+          </ul>
+          <p class="kecil">LacakTrans adalah aplikasi independen, tidak berafiliasi dengan TransJakarta, KAI Commuter, MRT Jakarta, maupun LRT.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="judul-tanya">
+        <h2 id="judul-tanya">Pertanyaan umum</h2>
+        <details>
+          <summary>Kenapa LacakTrans tidak ada di Play Store?</summary>
+          <p>Untuk saat ini LacakTrans dibagikan langsung sebagai berkas APK lewat halaman ini. Halaman ini selalu berisi versi terbaru, jadi cukup bagikan tautan ini.</p>
+        </details>
+        <details>
+          <summary>Apakah aman dipasang?</summary>
+          <p>APK di halaman ini ditandatangani dengan kunci resmi LacakTrans, jadi pembaruan hanya bisa dipasang di atas aplikasi asli. Unduh hanya dari halaman ini, jangan dari berkas yang diteruskan orang lain.</p>
+        </details>
+        <details>
+          <summary>Apakah favorit saya hilang saat memperbarui?</summary>
+          <p>Tidak. Pasang versi baru di atas versi lama; favorit dan setelan tetap tersimpan di HP.</p>
+        </details>
+        <details>
+          <summary>Kenapa posisi kereta disebut perkiraan?</summary>
+          <p>KRL, MRT, dan LRT belum membuka data posisi kereta. LacakTrans menghitung posisinya dari jadwal, jadi ditandai perkiraan dan bisa berbeda dari kereta sebenarnya. Posisi bus TransJakarta berasal dari GPS armada.</p>
+        </details>
+        <details>
+          <summary>Saya memakai iPhone atau laptop.</summary>
+          <p>Gunakan <a id="tautan-web-faq" href="https://lacaktrans.silsilara.com">versi web</a>. Isinya sama dengan aplikasi Android.</p>
+        </details>
+        <details>
+          <summary>Pemasangan diblokir atau gagal.</summary>
+          <p>Pastikan izin <em>Instal aplikasi tidak dikenal</em> sudah dinyalakan untuk aplikasi yang membuka APK (Chrome, Drive, atau File). Bila muncul "Aplikasi tidak terpasang" karena versinya bentrok, hapus dulu LacakTrans versi uji coba lalu pasang ulang.</p>
+        </details>
+      </section>
+
+      <section aria-labelledby="judul-izin">
+        <h2 id="judul-izin">Izin yang diminta</h2>
+        <p>
+          LacakTrans hanya meminta izin <strong>lokasi</strong>, untuk mencari halte dan stasiun terdekat dan memusatkan peta ke
+          posisi Anda. Lokasi dibaca di HP dan tidak pernah dikirim ke server mana pun. Tanpa akun dan tanpa izin lain.
+          Penjelasan lengkapnya ada di <a href="privasi.html">Kebijakan Privasi</a>.
+        </p>
+      </section>
+
+      <footer>
+        © 2026 Risyad Abdala Ramadhan. Hak cipta dilindungi. ·
+        <a href="privasi.html">Kebijakan Privasi</a> ·
+        <a href="syarat.html">Syarat &amp; Ketentuan</a> ·
+        <a href="https://github.com/masrisyad">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/risyadabdalaramadhan/">LinkedIn</a>
+      </footer>
+    </main>
+
+    <script>
+      const TAUTAN_HALAMAN = 'https://unduh-lt.silsilara.com/'
+      // Info APK terbaru, sumber yang sama dengan dialog pembaruan di aplikasi (public/data/versi.json → "apk").
+      const VERSI_JSON = 'https://lacaktrans.silsilara.com/data/versi.json'
+      const $ = (id) => document.getElementById(id)
+
+      function tampilkanVersi(versi) {
+        const info = versi && versi.apk
+        if (!info || !/^https:\/\//.test(info.url || '')) return // belum ada APK: tetap pakai teks cadangan
+        const nama = String(info.versionName || info.versionCode || '')
+        if (nama) {
+          $('info-versi').textContent = nama
+          $('teks-apk').textContent = `Unduh APK ${nama}`
+          document.querySelectorAll('.versi-teks').forEach((el) => (el.textContent = nama))
+        }
+        if (info.ukuran) $('info-ukuran').textContent = info.ukuran
+        let tanggal = ''
+        if (/^\d{4}-\d{2}-\d{2}$/.test(info.tanggal || '')) {
+          tanggal = new Date(info.tanggal + 'T00:00:00').toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+        }
+        $('catatan-unduh').innerHTML =
+          (tanggal ? `Diperbarui ${tanggal}. ` : '') +
+          'APK diunduh dari Google Drive. Bila muncul peringatan pemindaian virus, ketuk <strong>Tetap download</strong> (<em>Download anyway</em>).'
+        $('tombol-apk').href = info.url
+        const catatan = (info.catatan && info.catatan.id) || ''
+        if (catatan) {
+          $('info-catatan').textContent = catatan
+          $('bagian-baru').hidden = false
+        }
+      }
+      fetch(VERSI_JSON, { cache: 'no-store' })
+        .then((r) => (r.ok ? r.json() : null))
+        .then(tampilkanVersi)
+        .catch(() => {}) // tetap pakai info cadangan di HTML
+
+      // Menyesuaikan perangkat: iPhone/iPad → versi web jadi tombol utama; komputer → kode QR untuk HP.
+      const ua = navigator.userAgent
+      const iphone = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
+      const android = /Android/i.test(ua)
+
+      // Browser bawaan aplikasi (daftar sama dengan situs Silsilara). WhatsApp & Telegram tidak termasuk: keduanya
+      // membuka tautan lewat Chrome Custom Tabs / Safari, tempat unduhan berjalan normal.
+      const APLIKASI = [
+        ['Instagram', /Instagram/],
+        ['Threads', /Barcelona/],
+        ['Facebook', /FBAN|FBAV|FB_IAB|FBIOS/],
+        ['TikTok', /musical_ly|BytedanceWebview|TikTok/i],
+        ['LINE', /\bLine\//],
+        ['LinkedIn', /LinkedInApp/],
+      ]
+      const aplikasi = APLIKASI.find(([, pola]) => pola.test(ua))?.[0]
+      if (aplikasi) {
+        $('nama-aplikasi').textContent = aplikasi
+        $('pesan-aplikasi').hidden = false
+        $('salin-aplikasi').addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(TAUTAN_HALAMAN)
+            $('salin-aplikasi').textContent = 'Tautan disalin'
+          } catch {
+            $('salin-aplikasi').textContent = TAUTAN_HALAMAN
+          }
+        })
+        const alamat = `${location.host}${location.pathname}${location.search}`
+        if (android) {
+          // Intent tanpa package= → browser default HP (Chrome, Firefox, Opera, dll.), bukan dipaksa ke Chrome.
+          const intent = `intent://${alamat}#Intent;scheme=https;end`
+          $('tombol-buka-browser').href = intent
+          $('tombol-buka-browser').hidden = false
+          $('petunjuk-menu').textContent =
+            'Bila tidak pindah otomatis, ketuk tombol di atas, atau ketuk ⋮ di pojok kanan atas lalu pilih Buka di browser.'
+          location.href = intent // coba otomatis; bila diabaikan aplikasinya, tombol di atas tetap ada
+        } else if (iphone) {
+          // iOS tidak punya intent seperti Android, jadi halaman tidak bisa membuka Safari sendiri.
+          const petunjuk = $('petunjuk-menu')
+          petunjuk.classList.remove('kecil')
+          petunjuk.innerHTML = 'Ketuk ikon titik tiga <strong>(⋯)</strong>, lalu pilih <strong>Buka di browser eksternal</strong>.'
+          $('salin-aplikasi').parentElement.before(petunjuk)
+        }
+      }
+      if (iphone) {
+        // Di dalam aplikasi cukup satu kotak (buka di browser); pesan iPhone tampil setelah halaman dibuka di Safari.
+        $('pesan-iphone').hidden = Boolean(aplikasi)
+        $('tombol-apk').classList.replace('utama', 'kedua')
+        $('tombol-web').classList.replace('kedua', 'utama')
+        $('tombol-web').parentElement.prepend($('tombol-web'))
+      } else if (!android) {
+        $('kartu-qr').hidden = false
+      }
+
+      // Bagikan: lembar bagikan bawaan HP bila ada, selain itu salin tautan.
+      const pesanBagikan = 'Unduh LacakTrans, aplikasi lacak TransJakarta, KRL, MRT, dan LRT:'
+      $('bagikan-salin').addEventListener('click', async () => {
+        if (navigator.share && (android || iphone)) {
+          try {
+            await navigator.share({ title: 'LacakTrans', text: pesanBagikan, url: TAUTAN_HALAMAN })
+            return
+          } catch (err) {
+            if (err?.name === 'AbortError') return
+          }
+        }
+        try {
+          await navigator.clipboard.writeText(TAUTAN_HALAMAN)
+          $('bagikan-status').textContent = 'Tautan disalin.'
+        } catch {
+          $('bagikan-status').textContent = TAUTAN_HALAMAN
+        }
+      })
+      if (navigator.share && (android || iphone)) $('bagikan-salin').textContent = 'Bagikan lainnya'
+
+      // Analitik PostHog (proyek yang sama dengan aplikasi, lihat src/lib/analitik.ts), seperti halaman unduh Silsilara:
+      // hanya 3 event, tanpa autocapture & rekaman sesi. Sengaja tidak memakai $pageview
+      // agar kunjungan di sini tidak ikut terhitung sebagai pengunjung aplikasi. GitHub Pages tanpa proxy /sinyal →
+      // kirim langsung ke PostHog EU. Kunci kosong atau di luar unduh-lt.silsilara.com: event hanya ditulis ke konsol.
+      const POSTHOG_KEY = '' // isi dengan kunci proyek PostHog LacakTrans (phc_...) setelah proyeknya dibuat
+      const ANALITIK = Boolean(POSTHOG_KEY) && location.hostname === 'unduh-lt.silsilara.com'
+      const antreanAnalitik = []
+      const lacak = (event, props = {}) => {
+        if (!ANALITIK) return console.info('[analitik]', event, props)
+        if (window.posthog?.__loaded) window.posthog.capture(event, props, { transport: 'sendBeacon' })
+        else antreanAnalitik.push([event, props])
+      }
+      if (ANALITIK) {
+        const skrip = document.createElement('script')
+        skrip.src = 'https://cdn.jsdelivr.net/npm/posthog-js@1.436.1/dist/array.full.no-external.js'
+        skrip.async = true
+        skrip.onload = () => {
+          window.posthog.init(POSTHOG_KEY, {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2026-08-30',
+            person_profiles: 'identified_only',
+            persistence: 'localStorage', // tanpa cookie
+            autocapture: false,
+            capture_pageview: false,
+            capture_pageleave: false,
+            capture_performance: false,
+            capture_dead_clicks: false,
+            capture_heatmaps: false,
+            capture_exceptions: false,
+            rageclick: false,
+            disable_session_recording: true,
+            disable_surveys: true,
+          })
+          window.posthog.register({ platform: 'Halaman unduh', browser_aplikasi: aplikasi || null })
+          antreanAnalitik.splice(0).forEach(([event, props]) => window.posthog.capture(event, props))
+        }
+        document.head.append(skrip)
+      }
+      const perangkat = iphone ? 'iPhone/iPad' : android ? 'Android' : 'Komputer'
+      lacak('buka_halaman_unduh', { perangkat })
+      $('tombol-apk').addEventListener('click', () => lacak('klik_unduh_apk', { perangkat, versi: $('info-versi').textContent }))
+      $('tombol-web').addEventListener('click', () => lacak('klik_buka_web', { perangkat, posisi: 'tombol' }))
+      $('tautan-web-faq').addEventListener('click', () => lacak('klik_buka_web', { perangkat, posisi: 'faq' }))
+    </script>
+  </body>
+</html>
