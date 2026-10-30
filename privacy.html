@@ -18,16 +18,24 @@
 
       <p>
         This policy explains what data LacakTrans uses, why, and where it is stored. In short: <strong>no account</strong>.
-        Favorites and settings stay on your device. Your location is read to find nearby stops and is <strong>never sent to
-        any server</strong>, because LacakTrans has no server for user data.
+        Favorites and settings stay on your device. Your location coordinates are read to find nearby stops and are
+        <strong>never sent to any server</strong>, because LacakTrans has no server for user data. Usage statistics only
+        include the names of the district (kecamatan), regency/city, and province you are in.
       </p>
 
       <h2>1. Location</h2>
       <p>
         If you allow it, LacakTrans reads your device location to show nearby stops and stations and to center the map on
-        you. The location is only used on the device while the app is open: it is not stored, not sent to a LacakTrans
-        server, and not passed to anyone else. Without location permission the app still works and nearby stops are
-        measured from the center of the map.
+        you. The location coordinates are only used on the device while the app is open: they are not stored, not sent to a
+        LacakTrans server, and not passed to anyone else. Without location permission the app still works and nearby stops
+        are measured from the center of the map.
+      </p>
+      <p>
+        <strong>User distribution.</strong> From that location, the app determines on the device the name of the
+        <strong>district (kecamatan), regency/city, and province</strong> you are in, using BPS boundary maps downloaded from
+        the LacakTrans site (only for the area around you, about 110 × 110 km). These three area names, not coordinates, are
+        sent with usage statistics (section 4) to understand where users are. Without location permission, no area name is
+        determined or sent.
       </p>
 
       <h2>2. Data stored on your device</h2>
@@ -35,7 +43,7 @@
         <li>Favorite stops and stations.</li>
         <li>Settings: light/dark theme, language, and the mode filter on the map.</li>
         <li>The latest schedule data downloaded from the LacakTrans site, so the app also works offline.</li>
-        <li>A random usage statistics code (see section 4) and a marker for postponed update notices.</li>
+        <li>A random usage statistics code (see section 4), the last area names (see section 1), and a marker for postponed update notices.</li>
         <li>On Android: a temporary Story card image when you share it; older images are deleted when you share again.</li>
       </ul>
       <p>This data is never sent to a LacakTrans server.</p>
@@ -45,7 +53,7 @@
       <ul>
         <li><strong>TransJakarta fleet feed</strong>: bus positions for the map area currently in view. TransJakarta's server receives requests per map area, not your GPS location.</li>
         <li><strong>OpenFreeMap</strong>: map images (tiles) for the area being viewed.</li>
-        <li><strong>The LacakTrans site</strong> (Vercel): latest schedules, version info, and disruption banners.</li>
+        <li><strong>The LacakTrans site</strong> (Vercel): latest schedules, version info, disruption banners, and area boundary maps for the area around you.</li>
       </ul>
       <p>
         Like any internet service, these providers can see the IP address of the device requesting data. Google Maps,
@@ -56,8 +64,9 @@
       <h2>4. Usage statistics</h2>
       <p>
         Anonymous usage statistics (screens opened, features used) are sent to PostHog (servers in the European Union)
-        <strong>without identity or GPS location</strong>, to prioritise development. They use a random code on the device,
-        not an account, name, or phone number.
+        <strong>without identity or GPS coordinates</strong>, to prioritise development. They use a random code on the device,
+        not an account, name, or phone number. If location permission is granted, statistics include the district
+        (kecamatan), regency/city, and province names (section 1). PostHog also estimates country and city from the IP address.
       </p>
 
       <h2>5. Sharing data</h2>

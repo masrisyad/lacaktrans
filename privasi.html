@@ -18,16 +18,24 @@
 
       <p>
         Kebijakan ini menjelaskan data apa yang dipakai LacakTrans, untuk apa, dan di mana data itu disimpan. Singkatnya:
-        <strong>tanpa akun</strong>. Favorit dan setelan hanya di perangkat Anda. Lokasi dibaca untuk mencari halte terdekat dan
-        <strong>tidak pernah dikirim ke server mana pun</strong>, karena LacakTrans tidak punya server untuk data pengguna.
+        <strong>tanpa akun</strong>. Favorit dan setelan hanya di perangkat Anda. Koordinat lokasi dibaca untuk mencari halte
+        terdekat dan <strong>tidak pernah dikirim ke server mana pun</strong>, karena LacakTrans tidak punya server untuk data
+        pengguna. Yang ikut statistik pemakaian hanya nama kecamatan, kabupaten/kota, dan provinsi tempat Anda berada.
       </p>
 
       <h2>1. Lokasi</h2>
       <p>
         Bila Anda mengizinkan, LacakTrans membaca lokasi perangkat untuk menampilkan halte dan stasiun terdekat dan untuk
-        memusatkan peta ke posisi Anda. Lokasi hanya dipakai di perangkat saat aplikasi terbuka: tidak disimpan, tidak
-        dikirim ke server LacakTrans, dan tidak diteruskan ke pihak lain. Tanpa izin lokasi, aplikasi tetap bisa dipakai dan
-        halte terdekat dihitung dari tengah peta.
+        memusatkan peta ke posisi Anda. Koordinat lokasi hanya dipakai di perangkat saat aplikasi terbuka: tidak disimpan,
+        tidak dikirim ke server LacakTrans, dan tidak diteruskan ke pihak lain. Tanpa izin lokasi, aplikasi tetap bisa
+        dipakai dan halte terdekat dihitung dari tengah peta.
+      </p>
+      <p>
+        <strong>Sebaran pengguna.</strong> Dari lokasi tersebut, aplikasi menentukan di perangkat nama
+        <strong>kecamatan, kabupaten/kota, dan provinsi</strong> tempat Anda berada, memakai peta batas wilayah BPS yang
+        diunduh dari situs LacakTrans (hanya untuk area sekitar Anda, sekitar 110 × 110 km). Ketiga nama wilayah itu, bukan
+        koordinat, ikut dikirim bersama statistik pemakaian (bagian 4) untuk mengetahui sebaran pengguna. Tanpa izin lokasi,
+        nama wilayah tidak ditentukan dan tidak dikirim.
       </p>
 
       <h2>2. Data yang tersimpan di perangkat</h2>
@@ -35,7 +43,7 @@
         <li>Halte dan stasiun favorit.</li>
         <li>Setelan: tema terang/gelap, bahasa, dan filter moda di peta.</li>
         <li>Data jadwal terbaru yang diunduh dari situs LacakTrans, agar tetap bisa dipakai saat offline.</li>
-        <li>Kode acak statistik pemakaian (lihat bagian 4) dan penanda pemberitahuan versi baru yang ditunda.</li>
+        <li>Kode acak statistik pemakaian (lihat bagian 4), nama wilayah terakhir (lihat bagian 1), dan penanda pemberitahuan versi baru yang ditunda.</li>
         <li>Di Android: gambar kartu Story sementara saat Anda membagikannya; gambar lama dihapus saat Anda berbagi lagi.</li>
       </ul>
       <p>Data ini tidak pernah dikirim ke server LacakTrans.</p>
@@ -45,7 +53,7 @@
       <ul>
         <li><strong>Feed armada TransJakarta</strong>: posisi bus untuk area peta yang sedang terlihat. Server TransJakarta menerima permintaan per area peta, bukan lokasi GPS Anda.</li>
         <li><strong>OpenFreeMap</strong>: gambar peta (tile) untuk area yang sedang dilihat.</li>
-        <li><strong>Situs LacakTrans</strong> (Vercel): jadwal terbaru, info versi, dan banner gangguan.</li>
+        <li><strong>Situs LacakTrans</strong> (Vercel): jadwal terbaru, info versi, banner gangguan, dan peta batas wilayah untuk area sekitar Anda.</li>
       </ul>
       <p>
         Seperti semua layanan internet, penyedia tersebut dapat melihat alamat IP perangkat yang meminta data. Google Maps,
@@ -56,8 +64,9 @@
       <h2>4. Statistik pemakaian</h2>
       <p>
         Statistik pemakaian anonim (layar yang dibuka, fitur yang dipakai) dikirim ke PostHog (server di Uni Eropa)
-        <strong>tanpa identitas dan tanpa lokasi GPS</strong>, untuk memprioritaskan pengembangan. Statistik ini memakai kode
-        acak di perangkat, bukan akun, nama, atau nomor telepon.
+        <strong>tanpa identitas dan tanpa koordinat GPS</strong>, untuk memprioritaskan pengembangan. Statistik ini memakai kode
+        acak di perangkat, bukan akun, nama, atau nomor telepon. Bila izin lokasi diberikan, statistik menyertakan nama
+        kecamatan, kabupaten/kota, dan provinsi (bagian 1). PostHog juga memperkirakan negara dan kota dari alamat IP.
       </p>
 
       <h2>5. Berbagi data</h2>
