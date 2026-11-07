@@ -14,7 +14,7 @@
     <main>
       <p class="kecil"><a href="./">← LacakTrans</a> · <a href="privasi.html" lang="id">Bahasa Indonesia</a></p>
       <h1>Privacy Policy</h1>
-      <p class="kecil">Effective 30 October 2026 · App: LacakTrans (Android <code>com.silsilara.lacaktrans</code> and web)</p>
+      <p class="kecil">Effective 30 October 2026 · Updated 8 November 2026 · App: LacakTrans (Android <code>com.silsilara.lacaktrans</code> and web)</p>
 
       <p>
         This policy explains what data LacakTrans uses, why, and where it is stored. In short: <strong>no account</strong>.
@@ -57,11 +57,17 @@
         Anonymous usage statistics, including the district (kecamatan), regency/city, and province when location permission
         is granted, are sent to an analytics service to prioritise development, without an account, name, or GPS coordinates.
       </p>
+      <p>
+        The analytics service we use is <strong>PostHog</strong>, with servers in the European Union. What is sent: a random code
+        created on the device, the screens you open, taps without their text, technical info (platform, app version, language,
+        theme), and error reports. PostHog estimates country and city from the IP address. The web version sends through
+        <code>lacaktrans.silsilara.com/sinyal</code>, which forwards to PostHog, while the Android app sends directly to PostHog.
+      </p>
 
       <h2>5. Sharing data</h2>
       <p>
         LacakTrans <strong>does not sell, rent, or share</strong> your data with third parties, and shows no ads. The service
-        providers used to run LacakTrans only process data for that purpose: Vercel (site and schedule data), an analytics service (usage
+        providers used to run LacakTrans only process data for that purpose: Vercel (site and schedule data), PostHog (usage
         statistics), Google Drive (APK file), TransJakarta (bus positions), and OpenFreeMap (map). These providers may process
         data outside Indonesia.
       </p>

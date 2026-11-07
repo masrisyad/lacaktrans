@@ -14,7 +14,7 @@
     <main>
       <p class="kecil"><a href="./">← LacakTrans</a> · <a href="privacy.html" lang="en">English</a></p>
       <h1>Kebijakan Privasi</h1>
-      <p class="kecil">Berlaku sejak 30 Oktober 2026 · Aplikasi: LacakTrans (Android <code>com.silsilara.lacaktrans</code> dan web)</p>
+      <p class="kecil">Berlaku sejak 30 Oktober 2026 · Diperbarui 8 November 2026 · Aplikasi: LacakTrans (Android <code>com.silsilara.lacaktrans</code> dan web)</p>
 
       <p>
         Kebijakan ini menjelaskan data apa yang dipakai LacakTrans, untuk apa, dan di mana data itu disimpan. Singkatnya:
@@ -57,12 +57,19 @@
         Statistik pemakaian anonim, termasuk kecamatan, kabupaten/kota, dan provinsi bila izin lokasi diberikan, dikirim ke
         layanan analitik untuk memprioritaskan pengembangan, tanpa akun, nama, atau koordinat GPS.
       </p>
+      <p>
+        Layanan analitik yang kami pakai adalah <strong>PostHog</strong> dengan server di Uni Eropa. Yang dikirim: kode acak
+        yang dibuat di perangkat, layar yang dibuka, ketukan tanpa teks, info teknis (platform, versi aplikasi, bahasa, tema),
+        dan laporan galat. PostHog memperkirakan negara dan kota dari alamat IP. Versi web mengirim lewat alamat
+        <code>lacaktrans.silsilara.com/sinyal</code> yang diteruskan ke PostHog, sedangkan aplikasi Android mengirim langsung ke
+        PostHog.
+      </p>
 
       <h2>5. Berbagi data</h2>
       <p>
         LacakTrans <strong>tidak menjual, menyewakan, atau membagikan</strong> data Anda kepada pihak ketiga, dan tidak memakai
         iklan. Penyedia layanan yang dipakai untuk menjalankan LacakTrans hanya memproses data untuk keperluan itu: Vercel
-        (situs dan data jadwal), layanan analitik (statistik pemakaian), Google Drive (berkas APK), TransJakarta (posisi bus), dan
+        (situs dan data jadwal), PostHog (statistik pemakaian), Google Drive (berkas APK), TransJakarta (posisi bus), dan
         OpenFreeMap (peta). Penyedia ini dapat memproses data di luar Indonesia.
       </p>
 
