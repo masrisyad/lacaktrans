@@ -154,7 +154,8 @@
 
       <div class="unduh">
         <div class="tombol-unduh">
-          <a id="tombol-apk" class="tombol utama" href="https://lacaktrans.silsilara.com" rel="noopener">
+          <!-- Disembunyikan sampai saklar.json terbaca: tetap tersembunyi selama mode pemeliharaan aktif. -->
+          <a id="tombol-apk" class="tombol utama" href="https://lacaktrans.silsilara.com" rel="noopener" hidden>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M11 4h2v9.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17zM5 18h14v2H5z"/></svg>
             <span id="teks-apk">APK segera tersedia</span>
           </a>
@@ -314,10 +315,28 @@
           $('bagian-baru').hidden = false
         }
       }
-      fetch(VERSI_JSON, { cache: 'no-store' })
-        .then((r) => (r.ok ? r.json() : null))
-        .then(tampilkanVersi)
-        .catch(() => {}) // tetap pakai info cadangan di HTML
+      // Saklar jarak jauh aplikasi (public/data/saklar.json). Selama pemeliharaan aktif, unduhan APK dari halaman ini
+      // ditutup: tombol Unduh APK dan kode QR disembunyikan. Pembaruan dari dalam APK tidak terpengaruh.
+      // Berkas gagal dibaca/rusak = dianggap tidak pemeliharaan, sama seperti aplikasi.
+      const SAKLAR_JSON = 'https://lacaktrans.silsilara.com/data/saklar.json'
+      function terapkanPemeliharaan(saklar) {
+        const pemeliharaan = saklar?.pemeliharaan?.aktif === true
+        $('tombol-apk').hidden = pemeliharaan
+        if (!pemeliharaan) return
+        $('kartu-qr').hidden = true
+        $('catatan-unduh').textContent =
+          'Unduhan APK sementara ditutup karena LacakTrans sedang dalam pemeliharaan. Pantau kabar terbarunya di Instagram @lacaktrans.'
+      }
+      const ambilJson = (url) =>
+        fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : null))
+          .catch(() => null)
+      Promise.all([ambilJson(VERSI_JSON), ambilJson(SAKLAR_JSON)]).then(([versi, saklar]) => {
+        try {
+          tampilkanVersi(versi)
+        } catch {} // tetap pakai info cadangan di HTML
+        terapkanPemeliharaan(saklar)
+      })
 
       // Menyesuaikan perangkat: iPhone/iPad → versi web jadi tombol utama; komputer → kode QR untuk HP.
       const ua = navigator.userAgent
